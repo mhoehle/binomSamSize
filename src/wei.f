@@ -25,7 +25,7 @@ c      implicit real*8 (a-h,p-z)
 c      IMPLICIT REAL(KIND=DPKIND)(a-h,p-z)
       implicit double precision (a-h,p-z)
 c hoehle: changed dimension to begin at -1 instead of 0
-      dimension  rlow(-1:17000), rupp(-1:17000) 
+      dimension  rlow(-1:17000), rupp(-1:17000)
       rc = 1.0
 
 10    if( rc .lt. 0.0 )goto 100
@@ -56,8 +56,8 @@ C        write(*,*) alpha, rc, rd, rn0, rlmbda, 'abnormal'
           index = index + 1
         endif
 c     changed use of max/min to get around pedantic to amax1/amin1
-        rlow(k) = amax1(0.0,  amin1(1.0-2.0*rd, rl))
-        rupp(k) = amin1(1.0,  amax1(2.0*rd, center+rd))
+        rlow(k) = dmax1(DBLE(0.0),  dmin1(1.0-2.0*rd, rl))
+        rupp(k) = dmin1(DBLE(1.0),  dmax1(2.0*rd, center+rd))
 40    continue
       if( index .le. -1 )goto 30
 
@@ -94,16 +94,16 @@ C hoehle     call G01BJF(nn,rp,nk1,plek1,pgtk1,peqk1,ifail)
       else
         ifail = 0
         rp = rlow(i0)
-        nk2 = j0 - 1 
+        nk2 = j0 - 1
 C hoehle       call G01BJF(nn,rp,nk2,plek2,pgtk2,peqk2,ifail)
         plek2 = fpbinom(DBLE(nk2),DBLE(nn),DBLE(rp), 1, 0)
         rr = plek1 - plek2
       endif
-  
+
 57    if( rr .lt. cov )then
         cov = rr
       endif
-      
+
       if( cov .lt. calpha )then
         goto 30
       else
@@ -112,7 +112,7 @@ C hoehle       call G01BJF(nn,rp,nk2,plek2,pgtk2,peqk2,ifail)
 
 C     The minimum of cov prob at the upper limits in (0, 0.5001)
 C     ===========================================================
-60    j = -1 
+60    j = -1
 70    j = j + 1
       if( rupp(j) .ge. 0.5001 )goto 80
       j0 = j
@@ -134,7 +134,7 @@ C hoehle      call G01BJF(nn,rp,nk1,plek1,pgtk1,peqk1,ifail)
 
       ifail = 0
       rp = rupp(j0)
-      nk2 = j0 
+      nk2 = j0
 C hoehle    call G01BJF(nn,rp,nk2,plek2,pgtk2,peqk2,ifail)
       plek2 = fpbinom(DBLE(nk2),DBLE(nn),DBLE(rp), 1, 0)
 

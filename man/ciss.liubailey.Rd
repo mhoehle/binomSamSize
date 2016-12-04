@@ -12,10 +12,10 @@ ciss.liubailey(alpha, d, lambda.grid = 0:30)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{alpha}{ a \eqn{(1-\alpha/2)\cdot 100\%} confidence interval is
+  \item{alpha}{ a \eqn{(1-\alpha/2)\cdot 100\%}{(1-alpha/2)*100\%} confidence interval is
     computed }
   \item{d}{ half width of the confidence interval }
-  \item{lambda.grid}{ range of lambda values to try } } 
+  \item{lambda.grid}{ range of lambda values to try } }
 \details{
 
   The objective is to find the minimum sample size \eqn{n} so that the
@@ -49,23 +49,23 @@ where \eqn{\hat{p}_n = x/n}. The interval is then expanded to a full
   actual binomial data are obtained the function
   \code{\link{binom.liubailey}} can be used to compute the actual
   confidence interval.
-  
+
   The R function code calls the original Fortran code developed for the
   Liu and Bailey (2002) article. NAG calls were replaced by R API calls
-  and an R wrapper calling the code as subroutine was created.
-  
+  and an R wrapper calling the code as a subroutine was created.
+
 }
 \value{
    a vector containing the following three elements
-   \item{nstar}{sample size at most favorable lambda value in lambda.grid}
+   \item{nstar}{sample size at most favorable lambda value in \code{lambda.grid}}
    \item{cp}{coverage probability}
-   \item{lambda}{value in lambda.grid giving the lowest nstar value}
+   \item{lambda}{value in lambda.grid giving the lowest \code{nstar} value}
 }
 \references{
   Agresti, A. and Coull, B.A. (1998), Approximate is Better than
   "Exact" for Interval Estimation of Binomial Proportions, The
   American Statistician, 52(2):119-126.
-  
+
   Liu, W. and Bailey, B.J.R. (2002), Sample size determination for
   constructing a constant width confidence interval for a binomial
   success probability. Statistics and Probability Letters, 56(1):1-5.

@@ -1,3 +1,6 @@
 binomSamSize-Ex.*
+\.git/.*
+\./..Rcheck
+\./binomSamSize.Rcheck
 
 
