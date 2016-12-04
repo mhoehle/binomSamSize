@@ -2,5 +2,7 @@ binomSamSize-Ex.*
 \.git/.*
 \./..Rcheck
 \./binomSamSize.Rcheck
+^HelpingOthers/
+^binomSamSize_[0-9\.-]+\.tar\.gz
 
 

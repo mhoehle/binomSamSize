@@ -1,14 +1,14 @@
 Package: binomSamSize
 Type: Package
-Title:   Confidence intervals and sample size determination for a binomial proportion under simple random sampling and pooled sampling
+Title:   Confidence Intervals and Sample Size Determination for a Binomial Proportion under Simple Random Sampling and Pooled Sampling
 Version: 0.1-4
 Date: 2016-12-04
-Authors@R: c(person("Michael", "HÃ¶hle",
+Authors@R: c(person("Michael", "Höhle",
                   email = "hoehle@math.su.se",
                   role = c("aut", "cre")),
              person("Wei", "Liu", role = "ctb"))
-Author: Michael Hoehle [aut,ctb] with contributions by Wei Liu [ctb]
-Maintainer: Michael Hoehle <hoehle@math.su.se>
+Author: Michael Höhle [aut, cre], Wei Liu [ctb]
+Maintainer: Michael Höhle <hoehle@math.su.se>
 Depends: binom
 Suggests: testthat
 Description:
