@@ -6,7 +6,7 @@ Date: 2013-12-10
 Author: Michael Hoehle with contributions by Wei Liu
 Maintainer: Michael Hoehle <hoehle@math.su.se>
 Depends: binom
-Description: 
+Description:
   A suite of functions to compute confidence intervals and necessary
   sample sizes for the parameter p of the Bernoulli B(p)
   distribution under simple random sampling or under pooled

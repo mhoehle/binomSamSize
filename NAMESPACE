@@ -1,6 +1,8 @@
 useDynLib(binomSamSize)
 
 import("binom")
+importFrom("graphics", "plot")
+importFrom("stats", "dbinom", "pbinom", "plogis", "qlogis", "qnorm","uniroot")
 
 export("binom.liubailey")
 export("binom.midp")
