@@ -1,4 +1,4 @@
-useDynLib(binomSamSize)
+useDynLib(binomSamSize, .registration = TRUE)
 
 import("binom")
 importFrom("graphics", "plot")

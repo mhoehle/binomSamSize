@@ -5,8 +5,8 @@
 
 liuSamSize <- function(alpha, d, lambda) {
   #Call the Code bei Wei Liu
-  res <- .Fortran("liusamsize",alpha=as.double(alpha), d=as.double(d), lambda=as.double(lambda), nstar=as.double(0), n0=as.double(0), cp=as.double(0), package="binomSamSiz",PACKAGE="binomSamSize")
-  
+  res <- .Fortran("liusamsize",alpha=as.double(alpha), d=as.double(d), lambda=as.double(lambda), nstar=as.double(0), n0=as.double(0), cp=as.double(0), PACKAGE="binomSamSize")
+
   #Manipulate output where necessary, i.e. round n0
   res$n0 <- ceiling(res$n0)
 
