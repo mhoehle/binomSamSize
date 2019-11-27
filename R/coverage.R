@@ -21,7 +21,7 @@
 #   - minimum coverage probability (aka. coverage coefficient)
 #
 ######################################################################
-coverage <- function(ci.fun, n, alpha=0.05, p.grid=NULL,interval=c(0,1),
+coverage <- function(ci.fun, n, alpha=0.05, p.grid=NULL, interval=c(0,1),
                      pmfX=function(k,n,p) dbinom(k,size=n,prob=p), ...) {
   if (! (all(interval >= 0) & all(interval <= 1)) & (interval[2]<interval[1])) {
     stop("Error: Interval has to be a subset of [0,1] with borders upper>lower.")
@@ -30,7 +30,7 @@ coverage <- function(ci.fun, n, alpha=0.05, p.grid=NULL,interval=c(0,1),
   #The minimum coverage probability is attained in the finite set of
   #probabilities that contains the left limit and right limit for
   #all \hat{p}_n = 0,1/n,\ldots, 1. 
-  CIs <- ci.fun(x=0:n, n=n, conf.level=1-alpha,...)[,c("lower","upper")]
+  CIs <- ci.fun(x=0:n, n=n, conf.level=1-alpha, ...)[,c("lower","upper")]
 
   #Indiciator function to investigate whether a specific p
   #is covered by the confidence interval or not
