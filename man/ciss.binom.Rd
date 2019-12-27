@@ -18,7 +18,7 @@ ciss.binom(p0, d, alpha=0.05, ci.fun=binom.confint,
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{p0}{ hypothesized value of the parameter \eqn{p} in the binomial
-    distributionproportion. This is an upper bound if \code{p0}
+    distribution proportion. This is an upper bound if \code{p0}
     is below 1/2, and a lower bound if \code{p0} is above 1/2. }
   \item{d}{ half width of the confidence interval. Note: The CI is not
     necessarily symmetric about the estimate so we just look at its
@@ -75,7 +75,7 @@ ciss.binom(p0, d, alpha=0.05, ci.fun=binom.confint,
 %\references{
 %
 %}
-\author{ M. \enc{Höhle}{Hoehle} }
+\author{ M. \enc{HÃ¶hle}{Hoehle} }
 
 \seealso{ \code{\link[binom]{binom.confint}} and its related functions }
 \examples{
