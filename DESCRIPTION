@@ -3,12 +3,12 @@ Type: Package
 Title: Confidence Intervals and Sample Size Determination for a Binomial Proportion under Simple Random Sampling and Pooled Sampling
 Version: 0.1-5
 Date: 2017-03-07
-Authors@R: c(person("Michael", "Höhle",
+Authors@R: c(person("Michael", "Hoehle",
                   email = "hoehle@math.su.se",
                   role = c("aut", "cre")),
              person("Wei", "Liu", role = "ctb"))
-Author: Michael Höhle [aut, cre], Wei Liu [ctb]
-Maintainer: Michael Höhle <hoehle@math.su.se>
+Author: Michael Hoehle [aut, cre], Wei Liu [ctb]
+Maintainer: Michael Hoehle <hoehle@math.su.se>
 Depends: binom
 Suggests: testthat
 Description:
