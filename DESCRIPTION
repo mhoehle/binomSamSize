@@ -8,7 +8,7 @@ Authors@R: c(person("Michael", "Hoehle",
                   role = c("aut", "cre")),
              person("Wei", "Liu", role = "ctb"))
 Author: Michael Hoehle [aut, cre], Wei Liu [ctb]
-Maintainer: Michael Hoehle <hoehle@math.su.se>
+Maintainer: Michael Hoehle <michael.hoehle@uni-greifswald.de>
 Depends: binom
 Suggests: testthat
 Description:
